@@ -1,5 +1,4 @@
 package fundamentos.powerclasses;
-
 public class StringSample {
     public static void main(String[] args) {
         /**
@@ -10,6 +9,7 @@ public class StringSample {
          * https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/lang/String.html
          */
         metodoConcat();
+        //metodoConcat();
         //metodoContains();
         //metodoIsBlank();
         //metodoLowerUpperCase();
@@ -21,7 +21,7 @@ public class StringSample {
     static void metodoLowerUpperCase(){
         /** métodos que tornam as palavras  minusculas respectivamente*/
 
-        String nome = "GLEYSON SAMPAIO";
+        String nome = "ANDERSON DUARTE";
         String nomeMinusculo = nome.toLowerCase();
         System.out.println(nomeMinusculo);
 
@@ -45,11 +45,11 @@ public class StringSample {
          * em uma determinada variável do tipo String retorna um valor boolean
          * verdadeiro ou falso*/
 
-        String nome = "gleyson sampaio";
-        String palavra = "sampaio";
+        String nome = "anderson duarte";
+        String palavra = "duarte";
         Boolean resposta = nome.contains(palavra);//ver aplicabilidade de usar classes Wrappers (toString)
 
-        System.out.println("O nome ".concat(nome).concat(" contains a plavara ")
+        System.out.println("O nome ".concat(nome).concat(" contains a palavra ")
                 .concat(palavra).concat("?\nResposta:").concat( resposta.toString() ));
 
     }
