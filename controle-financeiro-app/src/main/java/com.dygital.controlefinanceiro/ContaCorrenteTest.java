@@ -14,6 +14,9 @@ public class ContaCorrenteTest {
         contaUm.setDataNascimento(LocalDate.of(1985, 12, 10));
 
         contaUm.depositar(50.0);
+        contaUm.depositar(0.0);
+        contaUm.sacar(10.0);
+        contaUm.sacar(60.0);
 
         System.out.println(contaUm);
     }

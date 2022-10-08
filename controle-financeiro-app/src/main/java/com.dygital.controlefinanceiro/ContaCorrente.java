@@ -71,24 +71,40 @@ public class ContaCorrente {
     }
 
     public void sacar(Double valor){
-        if(valor > getSaldo()) {
-            System.out.println("Saldo insuficiente para esta transação.");
+        if((getSaldo() - valor) < 0) {
+            System.out.println("Saldo insuficiente para a transação de Saque.");
         }else{
             setSaldo(getSaldo() - valor);
         }
     }
 
-    void transferir(ContaCorrente conta, ContaCorrente destino){}
-
-    boolean cancelar(ContaCorrente conta, String justificativa){
-        return false;
+    public void transferir(Double valor, ContaCorrente destino){
+        if((getSaldo() - valor) < 0) {
+            System.out.println("Saldo insuficiente para a transação de Transferência.");
+        }else{
+            setSaldo(getSaldo() - valor);
+            destino.saldo = destino.getSaldo() + valor;
+            System.out.println("Transferencia realizada com Sucesso!");
+        }
     }
-
+    public boolean cancelar(ContaCorrente conta, String justificativa) {
+        boolean cancelada = false;
+        if (justificativa.length() == 0) {
+            System.out.println("Favor insira uma justificativa para cancelar conta.");
+        } else {
+            cancelada = true;
+            System.out.println("Sua conta doi Cancelada com Sucesso");
+        }
+        return cancelada;
+    }
     Double consultarSaldo(){
         return getSaldo();
     }
 
-    List consultarExtrato(Date dataInicial, Date dataFinal){
+    List consultarExtrato(LocalDate dataInicial, LocalDate dataFinal){
+        if(((dataInicial) == null) || ((dataInicial) == null)){
+            System.out.println("Data Inicial e data Final não podem ser Vazio");
+        }
         return null;
     }
 }
