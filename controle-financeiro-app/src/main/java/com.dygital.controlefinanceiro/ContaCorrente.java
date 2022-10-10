@@ -1,7 +1,9 @@
 package com.dygital.controlefinanceiro;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import static com.dygital.controlefinanceiro.AgenciaBancaria.contasBancarias;
 
 public class ContaCorrente {
     private Integer numeroConta;
@@ -93,7 +95,7 @@ public class ContaCorrente {
             System.out.println("Favor insira uma justificativa para cancelar conta.");
         } else {
             cancelada = true;
-            System.out.println("Sua conta doi Cancelada com Sucesso");
+            System.out.println("Sua conta foi Cancelada com Sucesso");
         }
         return cancelada;
     }
