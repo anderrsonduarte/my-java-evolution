@@ -13,6 +13,7 @@ public class FilaQueue {
         System.out.println("Fila de carros: " + Arrays.toString(array));
 
         Queue<String> carros = new LinkedList<>();
+        Queue<String> carros2 = new LinkedList<>();
 
         for(String carro : array){
             carros.add(carro);
@@ -25,6 +26,7 @@ public class FilaQueue {
         System.out.println(carros);
 
         System.out.println(carros.isEmpty()?"Fila vazia":"Fila com elementos");
+        System.out.println(carros2.isEmpty()?"Fila vazia":"Fila com elementos");
 
     }
 }
